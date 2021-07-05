@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서 판매 페이지(연습용2)</title>
+</head>
+<style>
+    
+
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+    
+    /*@media screen and (min-width: 768px) {
+          #opt1 {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;  
+            align-content: center;}
+          }*/
+    h1 {
+        text-align:center;
+    }
+    h4 {
+            font-size: 20px;
+            font-family: 'Nanum Pen Script', cursive;
+            margin:0;
+            padding:0;
+            text-align: center;
+    }
+    
+    
+    .caption p {
+            font-size: 20px;
+            font-family: 'Nanum Pen Script', cursive;
+            margin: 15px;
+            text-align: center;
+        }
+    .book_image {
+        width :40px;
+        border:1px solid ivory;
+        border-radius:50%;      
+	    animation: rotate 3s infinite;
+        float: left;
+  }
+
+  @keyframes rotate {
+    from {transform: perspective(200px) rotateX(0deg) rotateY(0deg);}
+    25% {transform: perspective(200px) rotateX(-180deg) rotateY(0deg);}
+    50% {transform: perspective(200px) rotateX(-360deg) rotateY(0deg);}
+    75% {transform: perspective(200px) rotateX(-360deg) rotateY(-180deg);}
+    to {transform: perspective(200px) rotateX(-360deg) rotateY(-360deg);}
+  }
+
+    #message {
+        font-size: 24px;
+        font-family: 'Nanum Pen Script', cursive;
+        margin: 15px;
+    }
+    body {
+        background : ivory;
+    }
+    .bigbox{
+        float: left;
+        margin-bottom:40px;
+    }
+    .box {
+      padding:5px 20px;
+      margin:5px;   
+	  width:140px;
+      height: 220px;
+      background-color:rgb(248, 239, 230);   
+    }
+    
+
+    #opt1{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content:center;  
+      align-content: center;        
+    }
+    .box img {
+        width: 120px;
+        display: block;
+        margin: auto;
+        padding-top:19px;
+        z-index:5;
+        transition: 1s;
+    }
+
+    .box img:hover {
+    transform: rotateY(20deg);
+  }
+
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+
+.vacant {
+    padding:5px 20px;
+      margin:5px;   
+	  width:140px;
+      height: 220px;
+      background-color:rgb(248, 239, 230);   
+      opacity: 0;
+}
+
+</style>
+<body>
+    <header>
+    <h1>찬희의 서재 판매 도서</h1>
+        <img src="images/book_image.jpg" class="book_image"> <p id="message"><small> *실제 판매도서가 아닌 웹사이트 제작 연습용 페이지입니다.</small></p>
+    </header>
+
+    <div class="container" id="opt1">
+        <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=20611627" target="_blank"><div class="bigbox">
+            <div class="box">
+                <img src="images/book.jpg">
+            </div>
+            <div class="caption">
+                <h4>지구인보다 지구를 사랑할 순 없어</h4>
+                <p>정세랑 <br> 가격 : 16800원 </p>
+                
+            </div>  
+        </div>
+    </a>
+
+        <div class="bigbox">
+            <div class="box"><img src="images/book2.jpg">
+            </div>
+      <div class="caption">
+              <h4>보건교사 안은영</h4>
+              <p>정세랑 <br> 가격 : 14000원 </p>          
+      </div>
+        </div>
+        
+        <div class="bigbox">
+            <div class="box"><img src="images/book3.jpg">
+            </div>  
+            <div class="caption">
+                <h4>지구에서 한아뿐</h4>
+                <p>정세랑 <br> 가격 : 13000원 </p>
+              </div>
+        </div>
+
+        <div class="bigbox">
+            <div class="box"><img src="images/book4.jpg">
+            </div>
+      <div class="caption">
+              <h4>달러구트 꿈 백화점</h4>
+              <p>이미예 <br> 가격 : 13800원 </p>          
+      </div>
+        </div>
+
+        <div class="bigbox">
+            <div class="box"><img src="images/book5.jpg">
+            </div>
+      <div class="caption">
+              <h4>어린이라는 세계</h4>
+              <p>김소영 <br> 가격 : 13500원 </p>          
+      </div>
+        </div>
+
+        <div class="bigbox">
+            <div class="box"><img src="images/book6.jpg">
+            </div>
+      <div class="caption">
+              <h4>완전한 행복</h4>
+              <p>정유정 <br> 가격 : 15800원 </p>          
+      </div>
+        </div>
+
+        <div class="bigbox">
+            <div class="box"><img src="images/book7.jpg">
+            </div>
+      <div class="caption">
+              <h4>데미안</h4>
+              <p>헤르만 헤세 <br> 가격 : 8000원 </p>          
+      </div>
+        </div>
+
+        <div class="bigbox">
+            <div class="box"><img src="images/book8.jpg">
+            </div>
+      <div class="caption">
+              <h4>코스모스</h4>
+              <p>칼 세이건 <br> 가격 : 18500원 </p>          
+      </div>
+        </div>
+
+        <div class="bigbox">
+            <div class="vacant"></div>
+        </div>
+
+        <div class="bigbox">
+            <div class="vacant"></div>
+        </div>
+        
+        <div class="bigbox">
+            <div class="vacant"></div>
+        </div>
+
+        <div class="bigbox">
+            <div class="vacant"></div>
+        </div>
+        
+
+        </div>
+    </div>   
+</body>
+
+</html>
