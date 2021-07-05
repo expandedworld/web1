@@ -1,0 +1,68 @@
+body {background-color: ivory;}
+.container {
+    width:1000px;
+    margin:20px auto;
+  }
+  h1 {
+    text-align:center;
+  }
+ .book_image {
+    width :40px;
+    border:1px solid ivory;
+    border-radius:50%;      
+	  animation: rotate 3s infinite;
+    float: left;
+  }
+  @keyframes rotate {
+    from {transform: perspective(200px) rotateX(0deg) rotateY(0deg);}
+    25% {transform: perspective(200px) rotateX(-180deg) rotateY(0deg);}
+    50% {transform: perspective(200px) rotateX(-360deg) rotateY(0deg);}
+    75% {transform: perspective(200px) rotateX(-360deg) rotateY(-180deg);}
+    to {transform: perspective(200px) rotateX(-360deg) rotateY(-360deg);}
+  }
+
+  .prod-list {
+    list-style:none;
+    padding:0;
+  }
+  
+  .prod-list li {
+    float: left;
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  .prod-list img {
+    width: 300px;  
+    margin:0;
+    padding:0;
+    float:left;
+    z-index:5;
+    transition: 1s;
+  } 
+  .prod-list img:hover {
+    transform: rotateY(20deg);
+  }
+  
+  .prod-list .caption {
+    position: absolute;
+    top: 400px;
+    width: 300px;
+    height: 200px;
+    padding-top: 20px;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    z-index: 10;
+  }
+  .prod-list li:hover .caption {
+    opacity: 1;
+    transform: translateY(-180px);
+  }
+  
+  .prod-list .caption h3, .prod-list .caption p {
+    color: #fff;
+    text-align: center;
+  }
+  
